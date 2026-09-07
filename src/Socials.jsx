@@ -66,7 +66,7 @@ const ITEMS = [
 		counts: PROJECTS_DATA.map(() => "OPEN"),
 		newBars: [0, 3, 5],
 		stats: [
-			{ tag: "ALL", value: String(PROJECTS_DATA.length), color: "#e1306c" },
+			{ tag: "ALL", value: String(PROJECTS_DATA.length - 1), color: "#e1306c" },
 			{ tag: "TYPE", value: "PROJECT", color: "#f77737" },
 		],
 	},
