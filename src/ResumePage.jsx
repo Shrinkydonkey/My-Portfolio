@@ -627,9 +627,11 @@ export default function ResumePage({
 									<div className="resume-row-title">{row.title}</div>
 									<div className="resume-row-meta">{row.meta}</div>
 								</div>
-								{row.href ? (
+								{row.href && (section.id === "events" || section.id === "projects") ? (
                   <span className="resume-row-cta">
-                    {row.linkText || "View Profile"}
+                    {section.id === "events"
+                      ? row.linkText || "VIEW PROFILE"
+                      : "CHECK OUT"}
                   </span>
                 ) : null}
 							</button>

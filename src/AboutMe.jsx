@@ -7,6 +7,7 @@ import { PROFILE, SOCIAL_LINKS } from "./data/portfolioData";
 import { usePersonaSfx } from "./lib/usePersonaSfx";
 import { useSafeBackNavigation } from "./lib/useSafeBackNavigation";
 import { useNavigate } from "react-router-dom";
+import resume from "./assets/Piyush_Samal_Resume.pdf";
 
 const ABOUT_TEXT =
 	"CS Student interested in AI, ML, and Software Development. Passionate about problem-solving through competitive coding and hands-on projects.";
@@ -329,6 +330,7 @@ export default function AboutMe({ mediaMuted = true, sfxMuted = true }) {
           padding: 8px 12px;
           clip-path: polygon(0 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
           transition: transform 0.16s ease, background 0.16s ease;
+          text-decoration: none;
         }
 
         .about-link:hover {
@@ -529,6 +531,14 @@ export default function AboutMe({ mediaMuted = true, sfxMuted = true }) {
 								GitHub
 							</button>
 						) : null}
+            <a
+              className="about-link"
+              href={resume}
+              download="Piyush_Samal_Resume.pdf"
+              onMouseEnter={playHover}
+              onClick={playConfirm}>
+              ↓ RESUME
+            </a>
 						<button
 							type="button"
 							className="about-link"
